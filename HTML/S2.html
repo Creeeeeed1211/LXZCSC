@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style> body {
+        background-image: url('Pic/background.jpg');
+                background-repeat: no-repeat;
+                background-size: 100%;
+            }
+    </style>
+    <a href="Index.html" class="home-button">Back to Home</a>   
+    <head>
+        <charset="utf-8">
+        <title>Soldier</title>
+        <link rel="stylesheet" href="Web.css">
+    </head>
+    <body>
+        <section>
+           <div class="uk">
+                <div class="ukL">
+                    <h1>British Soldier</h1> 
+                        <P>Main Weapon: Lee-Enfield No. 4 Rifle</P>
+                        <P>Helmet: The MkII steel helmet.</P>
+                        <P>Bayonet: British soldiers were often equipped with a bayonet that could be attached to their rifle for close combat.</P>
+                        <p>Grenades: British soldiers were issued with a variety of grenades, including the No. 36 Mills Bomb and the No. 69 anti-tank grenade.</p>
+                </div>
+                <div id="ukR">
+                     <img src="https://i.pinimg.com/originals/e4/5d/eb/e45deb8b2cd44bd4f88a8f0a53b594e7.jpg" width="200" height="220">
+                     <div id="m1">
+                        <img src="https://i.pinimg.com/originals/e4/5d/eb/e45deb8b2cd44bd4f88a8f0a53b594e7.jpg">
+                    </div>
+                </div> 
+
+           </div>
+           </div>
+            <div class="us">
+                <div id ="usL">
+                    <img src="https://static.turbosquid.com/Preview/2017/07/12__14_59_50/ww2_soldier_US_paratrooper_101st_10.jpg18FF6945-F08F-4AAF-A770-7620F1F3DCAEOriginal.jpg" width="200" height="220">
+                    <div id = "m2">
+                        <img src = "https://static.turbosquid.com/Preview/2017/07/12__14_59_50/ww2_soldier_US_paratrooper_101st_10.jpg18FF6945-F08F-4AAF-A770-7620F1F3DCAEOriginal.jpg">
+                    </div>
+                </div>
+                <div class ="usR">
+                    <h1>American Soldier</h1>
+                    <P>Main Weapon:M1 Garand Rifle</P>
+                    <p>Helmet: The M1 steel helmet.</p>
+                    <p>Bayonet: American soldiers were often equipped with a bayonet that could be attached to their rifle for close combat.</p>
+                    <p> Grenades: American soldiers were issued with a variety of grenades, including the M2 fragmentation grenade and the M9A1 bazooka rocket.</p>
+                </div>                    
+
+
+            </div>
+            <div class = "de">
+                <div class="deL">
+                        <h1>German Soldier</h1>
+                        <p>Main Weapon:Karabiner 98k Rifle</p>
+                        <p>Helmet: The Stahlhelm</p>
+                        <p>Bayonet: German soldiers were often equipped with a bayonet that could be attached to their rifle for close combat.</p>
+                        <p>Grenades: German soldiers were issued with a variety of grenades, including the Stielhandgranate and the Panzerwurfmine.</p>
+                </div>
+                <div  id="deR">
+                    <img src="https://i.pinimg.com/originals/9a/1e/05/9a1e058476e6acab36d138cf2dc12223.jpg" width="200" height="220">
+                    <div id = "m3">
+                        <img src="https://i.pinimg.com/originals/9a/1e/05/9a1e058476e6acab36d138cf2dc12223.jpg" >
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script>
+            alert("Hover on pictures to see more details.   ")
+            let oUKR = document.querySelector('#ukR');
+            let oM1 = document.querySelector('#m1');
+            let oBig1 = document.querySelector('#m1 img');
+            
+            oUKR.addEventListener('mousemove',e =>{
+                let x_left = e.clientX - oUKR.offsetLeft;
+                let y_top = e.clientY - oUKR.offsetTop;
+                // let _left = oUKR.offsetLeft;
+                // let _top = oUKR.offsetTop;
+                
+                oM1.style.left = x_left - oM1.offsetWidth / 2 + 'px';
+                oM1.style.top = y_top - oM1.offsetHeight / 2 + 'px';
+                let BigL1 = oBig1.offsetWidth / oUKR.offsetWidth * x_left - oM1.offsetWidth / 2;
+                let BigT1 = oBig1.offsetHeight / oUKR.offsetHeight * y_top - oM1.offsetHeight / 2;
+                
+                oBig1.style.left = -BigL1 + 'px';
+                oBig1.style.top = -BigT1 + 'px';
+            });
+
+
+
+            let oDER = document.querySelector('#deR');
+            let oM3 = document.querySelector('#m3');
+            let oBig3 = document.querySelector('#m3 img');
+            
+            oDER.addEventListener('mousemove',e =>{
+                let x_left = e.clientX - oDER.offsetLeft;
+                let y_top = e.clientY - oDER.offsetTop;
+                // let _left = oUKR.offsetLeft;
+                // let _top = oUKR.offsetTop;
+                
+                oM3.style.left = x_left - oM3.offsetWidth / 2 + 'px';
+                oM3.style.top = y_top - oM3.offsetHeight / 2 + 'px';
+                let BigL3 = oBig3.offsetWidth / oDER.offsetWidth * x_left - oM3.offsetWidth / 2;
+                let BigT3 = oBig3.offsetHeight / oDER.offsetHeight * y_top - oM3.offsetHeight / 2;
+                
+                oBig3.style.left = -BigL3 + 'px';
+                oBig3.style.top = -BigT3 + 'px';
+            });
+
+            let oUSL = document.querySelector('#usL');
+            let oM2 = document.querySelector('#m2');
+            let oBig2 = document.querySelector('#m2 img');
+            
+            oUSL.addEventListener('mousemove',e =>{
+                let x_left = e.clientX - oUSL.offsetLeft;
+                let y_top = e.clientY - oUSL.offsetTop;
+                
+                oM2.style.left = x_left - oM2.offsetWidth / 2 + 'px';
+                oM2.style.top = y_top - oM2.offsetHeight / 2 + 'px';
+                let BigL2 = oBig2.offsetWidth / oUSL.offsetWidth * x_left - oM2.offsetWidth / 2;
+                let BigT2 = oBig2.offsetHeight / oUSL.offsetHeight * y_top - oM2.offsetHeight / 2;
+                
+                oBig2.style.left = -BigL2 + 'px';
+                oBig2.style.top = -BigT2 + 'px';
+            });
+        </script>
+    </body>
+</html>

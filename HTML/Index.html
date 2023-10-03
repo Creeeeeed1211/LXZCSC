@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>  
+<title>Home page </title>
+<link rel="stylesheet" href="Web.css">
+<meta charset="utf-8">
+
+<!-- <audio src="C:\csc\HTML\57219536.mp3" loop="loop" controls="controls" autoplay="autoplay"></audio> -->
+
+<style type="text/css">
+    body {
+        background-image: url('https://wallpapercave.com/wp/wIC23Cy.jpg');
+                background-repeat: no-repeat;
+                background-size: 100%;
+    }
+</style>
+<body> 
+
+<div class="box1">   
+<h1>WordWarII</h1>
+    <div class="years">(1935--1945)</div>
+</div>
+
+<div class="box2"><a href="Country.html" > Main Ccountries in WW2. </a></div>
+<div class="box5"><a href="MainBattle.html" > Main Battle.</a></div>
+<div class="box6"><a href="S2.html" > Soldier in different countries.</a></div>
+<div class="box3"><a href="Contact.html" > Advice and Suggestion.</a></div>
+
+<div class="box4"><P id = "demo">In preparing for battle I have always found that plans are useless, but planning is indispensable. – Dwight D. Eisenhower</P>
+<button onclick="quote()">Q</button>    
+</div>
+<script>
+    alert("Click Q to roll a quote.")
+var o = -2;
+    function quote(){
+        var arr = ["Keep men, lose land: land can be taken again. Keep land, lose men: land and men are both lost.          –––Mao Zedong",
+        "Politics is war without bloodshed, while war is politics with bloodshed.     – Mao Zedong",
+        "History shows that there are no invincible armies and that there never have been. – Joseph Stalin",
+        "As long as there are sovereign nations possessing great power, war is inevitable. – Albert Einstein",
+        "The best argument against democracy is a five-minute conversation with the average voter. – Winston Churchill",
+        " would rather be the hammer than the anvil. – Erwin Rommel",
+        "We have only to kick in the door and the whole rotten structure will come crashing down. – Adolf Hitler",
+        "In wartime, truth is so precious that she should always be attended by a bodyguard of lies. – Winston Churchill",
+        "I only need a few thousand dead so that I can sit at the peace conference as a man who has fought. – Benito Mussolini"
+    ]
+    var num = Math.floor(Math.random()*arr.length);
+    console.log(num,arr[num]);
+    console.log(o);
+    //  var i = -1;
+     
+     while(num == o){
+        num = Math.floor(Math.random()*arr.length);
+     }
+     o = num ;
+     document.getElementById("demo").innerHTML =  arr[num];
+    //  document.getElementById("demo").innerHTML =  o;
+    // alert(arr[num]);
+
+    }
+    
+        
+        
+        
+        </script>
+<!-- <iframe src> = "Sound/57219536.mp3" allow = "autoplay" hidden > </iframe>  
+    ♬ please turn on the “media autoplay ”in browser settings. ♬ -->
+</body>
+</html>
